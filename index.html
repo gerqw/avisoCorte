@@ -42,7 +42,8 @@
             display: block;
             width: 100%;
             height: auto;
-            animation: girar 4s linear infinite;
+            /*animation: girar 4s linear infinite;*/
+            animation: pulsar 2s infinite alternate; /* Animación que se repite infinitamente */
         }
 
         body {
@@ -127,6 +128,20 @@
             margin-left: 25%;
         }
 
+
+        @keyframes pulsar {
+            0% {
+                transform: scale(1);
+                /* Escala normal al inicio */
+            }
+
+            100% {
+                transform: scale(1.2);
+                /* Escala al 120% al final de la animación */
+            }
+        }
+
+        /*
         @keyframes girar {
             from {
                 transform: rotate(360deg);
@@ -136,7 +151,7 @@
                 transform: rotate(0deg);
             }
         }
-
+        */
         @keyframes slidein {
             from {
                 transform: translateX(-100%);
@@ -146,67 +161,66 @@
                 transform: translateX(0);
             }
         }
+        
+        @media (max-width: 600px) {
 
-                @media (max-width: 600px){
-            
-            #green-line{
+            #green-line {
                 padding: 10px;
             }
 
-            #circle{
+            #circle {
                 width: 50px;
-                height: 50px ;
+                height: 50px;
             }
 
-            footer img{
+            footer img {
                 display: none;
             }
 
-            #atencion{
+            #atencion {
                 left: 35%;
             }
-            
-            #div-padre{
+
+            #div-padre {
                 width: 95%;
                 padding: 28px;
             }
 
-            #div-numero h2{
+            #div-numero h2 {
                 margin-right: 23%;
             }
 
-            #telefono{
+            #telefono {
                 margin-top: 3%;
                 margin-left: 18%;
             }
         }
 
-        @media (min-width: 1920px){
-            
-            h2{
+        @media (min-width: 1920px) {
+
+            h2 {
                 font-size: xxx-large;
             }
 
-            p{
+            p {
                 font-size: xx-large;
             }
 
-            #telefono{
+            #telefono {
                 margin-top: 9%;
                 margin-left: 13%;
             }
 
-            #div-numero h2{
+            #div-numero h2 {
                 margin-top: 7%;
                 font-size: xxx-large;
             }
 
-            #circle{
+            #circle {
                 height: 110px;
                 width: 110px;
             }
         }
-
     </style>
 </head>
 
@@ -216,22 +230,22 @@
         <div id="green-line"></div>
         <div class="curved-diagonal"></div>
         <div id="circle">
-            <img id="tuerquita" src="\apoyo-tecnico.png" alt="LOGO">
+            <img id="tuerquita" src="\precaucion.png" alt="LOGO">
         </div>
     </header>
 
     <section>
-        <h2>PROBLEMA</h2>
-        <h2 id="box-green">TÉCNICO</h2>
+        <h2>SU SERVICIO SE ENCUENTRA</h2>
+        <h2 id="box-green">SUSPENDIDO</h2>
     </section>
 
     <section>
-        <p>Estimado cliente recuerde que en los próximos días su servicio será <strong>suspendido</strong> por falta de
-            pago, para evitar
-            futuras molestias lo invitamos a que pueda regularizar su deuda. </p>
+        <p>Su servicio está suspendido debido a falta de pago o demora en la imputación del mismo.
+            Espere 48 horas para que el pago se registre en nuestro sistema y se reactive automáticamente.
+            Si necesita asistencia inmediata, por favor llámenos al <strong>0800 333 1672 (opción 3)</strong>.</p>
     </section>
 
-    <footer> 
+    <footer>
         <div id="div-padre">
             <img id="telefono" src="/image.png" alt="">
             <div id="div-numero">
@@ -248,7 +262,3 @@
 </body>
 
 </html>
-
-
-
-Su servicio está suspendido debido a falta de pago o demora en la imputación del mismo. Espere 48 horas para que el pago se registre en nuestro sistema y se reactive automáticamente. Si necesita asistencia inmediata, por favor llámenos al 0800 333 1672 (opción 3).
