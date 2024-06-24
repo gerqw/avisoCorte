@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/apoyo-tecnico.png" />
+    <title>PROBLEMA TECNICO</title>
+    <style>
+        #green-line {
+            background-color: #c9d452;
+            padding: 5px;
+        }
+
+        .curved-diagonal {
+            position: relative;
+            width: 100%;
+            height: 110px;
+            overflow: hidden;
+            background: linear-gradient(to top right, #1f396a, #458db3);
+            color: #fff;
+            clip-path: polygon(0 0, 100% 0, 100% 20%, 0 100%);
+            overflow: hidden;
+        }
+
+        #circle {
+            background: #cdd856;
+            width: 100px;
+            border-radius: 60%;
+            height: 100px;
+            position: absolute;
+            width: 80px;
+            z-index: 1;
+            object-fit: contain;
+            height: 80px;
+            left: 90%;
+            top: 10%;
+            transform: translate(-50%, -50%);
+        }
+
+        #tuerquita {
+            display: block;
+            width: 100%;
+            height: auto;
+            animation: girar 4s linear infinite;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        #box-green {
+            background-color: #cdd856;
+            border-radius: 10px;
+            display: inline-block;
+            padding: 10px;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        h2 {
+            font-weight: 600;
+            margin: auto;
+            font-size: 180%;
+        }
+
+        p {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #atencion {
+            background-color: #cdd856;
+            border-radius: 10px;
+            display: inline-block;
+            padding: 10px;
+            color: white;
+            font-style: italic;
+            animation-duration: 3s;
+            animation-name: slidein;
+            position: absolute;
+            bottom: 10%;
+            left: 85%;
+        }
+
+        footer {
+            background-color: #1c3a5c;
+            color: #fff;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer img {
+            width: 10%;
+            margin: 1%;
+            height: auto;
+            display: block;
+            float: left;
+        }
+
+        #div-padre {
+            width: 28%;
+            box-sizing: border-box;
+            padding: 10px;
+            float: right;
+        }
+
+        #div-numero h2 {
+            font-style: italic;
+            float: right;
+            margin-right: 10%;
+            margin-top: 6%;
+        }
+
+        #telefono {
+            margin-top: 7%;
+            margin-left: 25%;
+        }
+
+        @keyframes girar {
+            from {
+                transform: rotate(360deg);
+            }
+
+            to {
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes slidein {
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 600px){
+            
+            #green-line{
+                padding: 10px;
+            }
+
+            #circle{
+                width: 50px;
+                height: 50px ;
+            }
+
+            footer img{
+                display: none;
+            }
+
+            #atencion{
+                left: 35%;
+            }
+            
+            #div-padre{
+                width: 95%;
+                padding: 28px;
+            }
+
+            #div-numero h2{
+                margin-right: 22%;
+            }
+
+            #telefono{
+                margin-top: 3%;
+                margin-left: 18%;
+            }
+        }
+
+        /*cambio el ancho y el largo del circulo
+       
+        #div-padre
+            (sacar)
+            width
+            padding
+            float
+
+            #telefono
+            margin-top: 3%
+            margin-left: 18%
+       */
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div id="green-line"></div>
+        <div class="curved-diagonal"></div>
+        <div id="circle">
+            <img id="tuerquita" src="\apoyo-tecnico.png" alt="LOGO">
+        </div>
+    </header>
+
+    <section>
+        <h2>PROBLEMA</h2>
+        <h2 id="box-green">TÉCNICO</h2>
+    </section>
+
+    <section>
+        <p>Estimado cliente recuerde que en los próximos días su servicio será <strong>suspendido</strong> por falta de
+            pago, para evitar
+            futuras molestias lo invitamos a que pueda regularizar su deuda. </p>
+    </section>
+
+    <footer> 
+        <div id="div-padre">
+            <img id="telefono" src="/image.png" alt="">
+            <div id="div-numero">
+                <h2>0800 333 1672</h2>
+            </div>
+        </div>
+        <img src="/logo-isp-group-white-2021.png" alt="LOGO">
+    </footer>
+
+    <div id="atencion">
+        <p>Atención directa!</p>
+    </div>
+
+</body>
+
+</html>
