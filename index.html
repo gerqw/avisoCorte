@@ -162,7 +162,7 @@
             }
         }
         
-        @media (max-width: 600px) {
+        @media (max-width: 600px) { /*cel*/
 
             #green-line {
                 padding: 10px;
@@ -179,24 +179,37 @@
 
             #atencion {
                 left: 35%;
+                bottom: 68%;
             }
 
             #div-padre {
                 width: 95%;
                 padding: 28px;
+                display: flex; /* Utilizamos flexbox en el contenedor principal */
+                align-items: center; /* Centramos verticalmente los elementos */
             }
 
             #div-numero h2 {
-                margin-right: 23%;
+                /*margin-right: 23%;*/
+                margin-right: -10%;
             }
 
             #telefono {
                 margin-top: 3%;
                 margin-left: 18%;
             }
+
+            #descripcion{
+                margin-bottom: 60%;
+            }
+
+            footer{
+                position: fixed;
+                height: 17%;
+            }
         }
 
-        @media (min-width: 1920px) {
+        @media (min-width: 1920px) {  /*tv*/
 
             h2 {
                 font-size: xxx-large;
@@ -239,13 +252,16 @@
         <h2 id="box-green">SUSPENDIDO</h2>
     </section>
 
-    <section>
+    <section id="descripcion">
         <p>Su servicio está suspendido debido a falta de pago o demora en la imputación del mismo.
             Espere 48 horas para que el pago se registre en nuestro sistema y se reactive automáticamente.
             Si necesita asistencia inmediata, por favor llámenos al <strong>0800 333 1672 (opción 3)</strong>.</p>
     </section>
 
     <footer>
+        <div id="atencion">
+            <p>Atención directa!</p>
+        </div>
         <div id="div-padre">
             <img id="telefono" src="/image.png" alt="">
             <div id="div-numero">
@@ -254,11 +270,6 @@
         </div>
         <img src="/logo-isp-group-white-2021.png" alt="LOGO">
     </footer>
-
-    <div id="atencion">
-        <p>Atención directa!</p>
-    </div>
-
 </body>
 
 </html>
